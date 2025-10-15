@@ -1,5 +1,5 @@
 import { MicOff, Grid3X3, Volume2, BatteryFull } from 'lucide-react';
-import Logo from './Logo';
+import { Logo } from '@call-kaira/frontend-commons';
 
 function IphoneMock() {
   return (

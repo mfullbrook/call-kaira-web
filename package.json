@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@call-kaira/frontend-commons": "git+https://github.com/mfullbrook/call-kaira-frontend-commons.git",
+    "@hey-api/openapi-ts": "^0.85.2",
     "@react-router/fs-routes": "^7.9.4",
     "isbot": "5.1.26",
     "lucide-react": "^0.545.0",
@@ -38,13 +39,19 @@
   },
   "scripts": {
     "build": "react-router build",
+    "build:production": "react-router build --mode production",
+    "build:staging": "react-router build --mode staging",
     "cf-typegen": "wrangler types && react-router typegen",
     "check": "tsc && react-router build && wrangler deploy --dry-run",
-    "deploy": "bun run build && wrangler deploy",
+    "deploy:production": "npm run build:production && wrangler deploy --env=\"\"",
+    "deploy:staging": "npm run build:staging && wrangler deploy --env=\"\"",
     "dev": "react-router dev",
+    "dev:production": "react-router dev --env production",
+    "dev:staging": "react-router dev --env staging",
     "postinstall": "npm run cf-typegen",
-    "preview": "bun run build && vite preview",
-    "typecheck": "npm run typegen && tsc -b"
+    "preview": "npm run build && vite preview",
+    "typecheck": "npm run typegen && tsc -b",
+    "openapi-ts": "openapi-ts"
   },
   "type": "module"
 }

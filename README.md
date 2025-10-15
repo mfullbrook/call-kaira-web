@@ -48,6 +48,12 @@ npm run dev
 
 Your application will be available at `http://localhost:5173`.
 
+**Run dev server with specific environment:**
+```bash
+CLOUDFLARE_ENV=staging npm run dev
+CLOUDFLARE_ENV=production npm run dev
+```
+
 ## Typegen
 
 Generate types for your Cloudflare bindings in `wrangler.json`:
@@ -74,31 +80,19 @@ npm run preview
 
 ## Deployment
 
-If you don't have a Cloudflare account, [create one here](https://dash.cloudflare.com/sign-up)! Go to your [Workers dashboard](https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fworkers-and-pages) to see your [free custom Cloudflare Workers subdomain](https://developers.cloudflare.com/workers/configuration/routing/workers-dev/) on `*.workers.dev`.
-
-Once that's done, you can build your app:
+Deploy to Cloudflare Workers using environment-specific commands:
 
 ```sh
-npm run build
+# Deploy to staging
+npm run deploy:staging
+
+# Deploy to production
+npm run deploy:production
 ```
 
-And deploy it:
+**Note:** This project uses multiple Cloudflare environments. See [cloudflare-pages-wrangler-setup.md](./cloudflare-pages-wrangler-setup.md) for detailed configuration info.
 
-```sh
-npm run deploy
-```
-
-To deploy a preview URL:
-
-```sh
-npx wrangler versions upload
-```
-
-You can then promote a version to production after verification or roll it out progressively.
-
-```sh
-npx wrangler versions deploy
-```
+If you don't have a Cloudflare account, [create one here](https://dash.cloudflare.com/sign-up)!
 
 ## Styling
 

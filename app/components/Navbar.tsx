@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router';
 import { Menu, X } from 'lucide-react';
 import { useUser } from '../hooks/use-user';
 import { useWaitlist } from '~/contexts/WaitlistContext';
-import LogoType from './LogoType';
+import { LogoType } from '@call-kaira/frontend-commons';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

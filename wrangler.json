@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "react-router-starter-template",
+  "name": "call-kaira-web",
   "main": "./workers/app.ts",
   "compatibility_date": "2025-04-01",
   "compatibility_flags": ["nodejs_compat"],
@@ -13,9 +13,16 @@
     "SITE_MODE": "normal"
   },
   "env": {
-    "live": {
+    "production": {
       "vars": {
+        "VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare",
         "SITE_MODE": "waitlist"
+      }
+    },
+    "staging": {
+      "vars": {
+        "VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare",
+        "SITE_MODE": "normal"
       }
     }
   }
