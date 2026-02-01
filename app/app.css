@@ -1,21 +1,67 @@
+/* @import "./fonts.css";  include satoshi font */
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-heading: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-figtree: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  /* --font-satoshi: "Satoshi", ui-sans-serif, system-ui, sans-serif; */
 
-  --color-cerise-50: #fdedf0;
-  --color-cerise-100: #fbdae1;
-  --color-cerise-200: #f9b8c6;
-  --color-cerise-300: #f68fa8;
-  --color-cerise-400: #f4648d;
-  --color-cerise-500: #e82e71;
-  --color-cerise-600: #bb235a;
-  --color-cerise-700: #8d1842;
-  --color-cerise-800: #650e2d;
-  --color-cerise-900: #3c0518;
-  --color-cerise-950: #29020e;
+  /* Custom font sizes */
+  --text-xxs: 0.75rem;
+  --text-xs: 0.85rem;
+  --text-sm: 1rem;
+  --text-base: 1.1rem;
+  --text-lg: 1.3rem;
+  --text-xl: 1.45rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.85rem;
+  --text-5xl: 3.45rem;
+  --text-6xl: 3.95rem;
+  --text-7xl: 5.1rem;
+
+
+  --color-valencia-50: #fdedf0;
+  --color-valencia-100: #fbdae1;
+  --color-valencia-200: #f9b8c6;
+  --color-valencia-300: #f68fa8;
+  --color-valencia-400: #f4648d;
+  --color-valencia-500: #e82e71;
+  --color-valencia-600: #bb235a;
+  --color-valencia-700: #8d1842;
+  --color-valencia-800: #650e2d;
+  --color-valencia-900: #3c0518;
+  --color-valencia-950: #29020e;
+
+
+  /* https://www.tints.dev/palette/v1:dmFsZW5jaWF8RDkzNDJCfDUwMHxwfDB8MHwwfDEwMHxt */
+  /*
+    --color-valencia-50: #fdeded;
+  --color-valencia-100: #fbdbdb;
+  --color-valencia-200: #f7b2b1;
+  --color-valencia-300: #f58a88;
+  --color-valencia-400: #f35a55;
+  --color-valencia-500: #d9342b; -- anchor
+  --color-valencia-600: #ae2820;
+  --color-valencia-700: #851c16;
+  --color-valencia-800: #5d110c;
+  --color-valencia-900: #3c0705;
+  --color-valencia-950: #290403;
+  */
+  --color-valencia-50: oklch(0.959 0.017 17.56);
+  --color-valencia-100: oklch(0.918 0.036 17.86);
+  --color-valencia-200: oklch(0.828 0.081 19.9);
+  --color-valencia-300: oklch(0.748 0.131 21.8);
+  --color-valencia-400: oklch(0.669 0.189 25.47);
+  --color-valencia-500: oklch(0.582 0.203 28.42);
+  --color-valencia-600: oklch(0.494 0.172 28.6);
+  --color-valencia-700: oklch(0.406 0.141 28.52);
+  --color-valencia-800: oklch(0.315 0.109 28.8);
+  --color-valencia-900: oklch(0.234 0.082 28.35);
+  --color-valencia-950: oklch(0.186 0.063 27.98);
+  
 }
 
 /* Custom styles */
@@ -31,4 +77,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+}
+
+::selection {
+  background: oklch(from var(--color-valencia-500) l c h / 0.8);
+  color: white;
 }

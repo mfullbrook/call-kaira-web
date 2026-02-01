@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Search } from 'lucide-react';
-import { Country } from '@call-kaira/frontend-commons';
+import { Country } from '@mfullbrook/call-kaira-frontend-commons';
 
 interface CountryPickerProps {
   countries: Country[];
@@ -87,7 +87,7 @@ const CountryPicker: React.FC<CountryPickerProps> = ({ countries, value, onChang
   return (
     <div className={`relative ${className}`} ref={dropdownRef}>
       <div
-        className="w-full px-4 py-3 border border-gray-300 rounded-lg font-poppins focus:outline-none focus:border-cerise-500 focus:ring-2 focus:ring-cerise-500 cursor-pointer bg-white flex items-center justify-between"
+        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-valencia-500 focus:ring-2 focus:ring-valencia-500 cursor-pointer bg-white flex items-center justify-between"
         onClick={() => setIsOpen(!isOpen)}
         onKeyDown={handleKeyDown}
         tabIndex={0}
@@ -116,7 +116,7 @@ const CountryPicker: React.FC<CountryPickerProps> = ({ countries, value, onChang
                   setSearchTerm(e.target.value);
                   setHighlightedIndex(-1);
                 }}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg font-poppins text-sm focus:outline-none focus:border-cerise-500 focus:ring-2 focus:ring-cerise-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-valencia-500 focus:ring-2 focus:ring-valencia-500"
                 onKeyDown={handleKeyDown}
               />
             </div>
@@ -127,9 +127,9 @@ const CountryPicker: React.FC<CountryPickerProps> = ({ countries, value, onChang
               filteredCountries.map((country, index) => (
                 <div
                   key={country.code}
-                  className={`px-4 py-3 cursor-pointer flex items-center space-x-3 font-poppins hover:bg-gray-50 ${
-                    index === highlightedIndex ? 'bg-cerise-50' : ''
-                  } ${country.code === value?.code ? 'bg-cerise-50 text-cerise-600' : 'text-gray-900'}`}
+                  className={`px-4 py-3 cursor-pointer flex items-center space-x-3 hover:bg-gray-50 ${
+                    index === highlightedIndex ? 'bg-valencia-50' : ''
+                  } ${country.code === value?.code ? 'bg-valencia-50 text-valencia-600' : 'text-gray-900'}`}
                   onClick={() => handleSelect(country)}
                   role="option"
                   aria-selected={country.code === value?.code}
@@ -139,7 +139,7 @@ const CountryPicker: React.FC<CountryPickerProps> = ({ countries, value, onChang
                 </div>
               ))
             ) : (
-              <div className="px-4 py-3 text-gray-500 font-poppins text-sm">
+              <div className="px-4 py-3 text-gray-500 text-sm">
                 No countries found
               </div>
             )}

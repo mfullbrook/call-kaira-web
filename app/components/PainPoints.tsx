@@ -33,10 +33,10 @@ const PainPoints = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-lexend font-bold text-3xl sm:text-4xl text-gray-900 mb-4">
+          <h2 className="font-bold text-3xl sm:text-4xl text-gray-900 mb-4">
             Transform Your Business Challenges
           </h2>
-          <p className="font-poppins text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Stop losing opportunities due to missed calls and inefficient phone handling
           </p>
         </div>
@@ -47,10 +47,10 @@ const PainPoints = () => {
               <div className={`w-12 h-12 rounded-xl ${point.color} flex items-center justify-center mb-6`}>
                 <point.icon className="h-6 w-6" />
               </div>
-              <h3 className="font-lexend font-semibold text-xl text-gray-900 mb-4">
+              <h3 className="font-semibold text-xl text-gray-900 mb-4">
                 {point.title}
               </h3>
-              <p className="font-poppins text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 {point.description}
               </p>
             </div>

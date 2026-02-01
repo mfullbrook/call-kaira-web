@@ -17,9 +17,9 @@ const SubmitButton = ({ onClick, disabled, processing, className = '', text, pro
       type={type}
       onClick={onClick}
       disabled={disabled || (disabledWhenProcessing && processing)}
-      className={`w-full px-8 py-4 rounded-full font-poppins font-semibold text-lg transition-all duration-300 flex items-center justify-center group ${
+      className={`w-full px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 flex items-center justify-center group ${
         !disabled && !processing
-          ? 'bg-cerise-500 text-white hover:bg-cerise-600 active:translate-y-0.5 active:bg-cerise-600/80'
+          ? 'bg-valencia-500 text-white hover:bg-valencia-600 active:translate-y-0.5 active:bg-valencia-600/80'
           : 'bg-gray-200 text-gray-400 cursor-not-allowed'
       } ${className}`}
     >

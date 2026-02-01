@@ -62,22 +62,22 @@ const Pricing = () => {
           <BodyText size="lg" className="max-w-2xl mx-auto mb-8">
             Choose the plan that fits your business needs. No hidden fees, no setup costs.
           </BodyText>
-          <div className="inline-flex items-center bg-cerise-100 text-cerise-700 px-4 py-2 rounded-full font-poppins font-medium">
+          <div className="inline-flex items-center bg-valencia-100 text-valencia-700 px-4 py-2 rounded-full font-medium">
             <span>60 Free Minutes — No Credit Card Required</span>
           </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <FeatureCard key={index} className={`flex flex-col ${plan.popular ? 'ring-2 ring-cerise-500 transform scale-105' : ''}`}>
+            <FeatureCard key={index} className={`flex flex-col ${plan.popular ? 'ring-2 ring-valencia-500 transform scale-105' : ''}`}>
               {plan.popular && (
-                <div className="bg-cerise-500 text-white text-center py-2 px-4 -mx-8 -mt-8 mb-8 rounded-t-2xl font-poppins font-medium">
+                <div className="bg-valencia-500 text-white text-center py-2 px-4 -mx-8 -mt-8 mb-8 rounded-t-2xl font-medium">
                   Most Popular
                 </div>
               )}
 
               <div className="flex flex-col flex-1">
-                <h3 className="font-lexend font-semibold text-2xl text-gray-900 mb-2">
+                <h3 className="font-semibold text-2xl text-gray-900 mb-2">
                   {plan.name}
                 </h3>
                 <BodyText className="mb-6">
@@ -85,19 +85,19 @@ const Pricing = () => {
                 </BodyText>
 
                 <div className="flex items-baseline mb-6">
-                  <span className="font-lexend font-bold text-4xl text-gray-900">{plan.price}</span>
-                  <span className="font-poppins text-gray-500 ml-1">{plan.period}</span>
+                  <span className="font-bold text-4xl text-gray-900">{plan.price}</span>
+                  <span className="text-gray-500 ml-1">{plan.period}</span>
                 </div>
 
-                <div className="bg-cerise-50 text-cerise-700 px-4 py-2 rounded-lg font-poppins font-medium text-center mb-6">
+                <div className="bg-valencia-50 text-valencia-700 px-4 py-2 rounded-lg font-medium text-center mb-6">
                   {plan.minutes}
                 </div>
 
                 <ul className="space-y-4 mb-8 flex-1">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
-                      <Check className="h-5 w-5 text-cerise-500 mt-0.5 flex-shrink-0" />
-                      <span className="font-poppins text-gray-700">{feature}</span>
+                      <Check className="h-5 w-5 text-valencia-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>

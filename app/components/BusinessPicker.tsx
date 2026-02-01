@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { GooglePlaces } from '../app-client';
 import { Search, Building, MapPin, Loader } from 'lucide-react';
-import { Country, Place } from '@call-kaira/frontend-commons';
+import { Country, Place } from '@mfullbrook/call-kaira-frontend-commons';
 
 export interface BusinessDisplayProps {
   place: Place;
@@ -25,7 +25,7 @@ export const BusinessDisplay: React.FC<BusinessDisplayProps> = ({
     role={role}
     aria-selected={ariaSelected}
   >
-    <Building className="h-5 w-5 text-cerise-500 mt-0.5 flex-shrink-0" />
+    <Building className="h-5 w-5 text-valencia-500 mt-0.5 flex-shrink-0" />
     <div className="flex-1 min-w-0">
       <p className="text-gray-900 font-medium truncate">
         {place.displayName.text}
@@ -202,11 +202,11 @@ const BusinessPicker: React.FC<BusinessPickerProps> = ({
           onFocus={handleInputFocus}
           onKeyDown={handleKeyDown}
           placeholder="Your business name, city"
-          className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg font-poppins focus:outline-none focus:border-cerise-500 focus:ring-2 focus:ring-cerise-500"
+          className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:border-valencia-500 focus:ring-2 focus:ring-valencia-500"
         />
         <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
         {isLoading && (
-          <Loader className="absolute right-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-cerise-500 animate-spin" />
+          <Loader className="absolute right-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-valencia-500 animate-spin" />
         )}
       </div>
 
@@ -214,15 +214,15 @@ const BusinessPicker: React.FC<BusinessPickerProps> = ({
         <div className="absolute z-50 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-64 overflow-hidden">
           {error ? (
             <div className="p-4 text-center">
-              <p className="font-poppins text-sm text-red-500">Error searching companies</p>
-              <p className="font-poppins text-xs text-red-400 mt-1">
+              <p className="text-sm text-red-500">Error searching companies</p>
+              <p className="text-xs text-red-400 mt-1">
                 {error instanceof Error ? error.message : 'Unknown error'}
               </p>
             </div>
           ) : isLoading ? (
             <div className="p-4 text-center">
-              <Loader className="h-5 w-5 text-cerise-500 animate-spin mx-auto mb-2" />
-              <p className="font-poppins text-sm text-gray-500">Searching companies...</p>
+              <Loader className="h-5 w-5 text-valencia-500 animate-spin mx-auto mb-2" />
+              <p className="text-sm text-gray-500">Searching companies...</p>
             </div>
           ) : places.length > 0 ? (
             <div className="max-h-64 overflow-y-auto">
@@ -230,8 +230,8 @@ const BusinessPicker: React.FC<BusinessPickerProps> = ({
                 <BusinessDisplay
                   place={place}
                   key={place.id}
-                  className={`px-4 py-3 cursor-pointer font-poppins hover:bg-gray-50 ${
-                    index === highlightedIndex ? 'bg-cerise-50' : ''
+                  className={`px-4 py-3 cursor-pointer hover:bg-gray-50 ${
+                    index === highlightedIndex ? 'bg-valencia-50' : ''
                   }`}
                   onClick={() => handleSelect(place)}
                   role="option"
@@ -242,14 +242,14 @@ const BusinessPicker: React.FC<BusinessPickerProps> = ({
           ) : debouncedSearchTerm.length >= 2 ? (
             <div className="p-4 text-center">
               <Building className="h-8 w-8 text-gray-300 mx-auto mb-2" />
-              <p className="font-poppins text-sm text-gray-500">No companies found</p>
-              <p className="font-poppins text-xs text-gray-400 mt-1">
+              <p className="text-sm text-gray-500">No companies found</p>
+              <p className="text-xs text-gray-400 mt-1">
                 Try a different search term
               </p>
             </div>
           ) : (
             <div className="p-4 text-center">
-              <p className="font-poppins text-sm text-gray-500">
+              <p className="text-sm text-gray-500">
                 Type at least 2 characters to search
               </p>
             </div>

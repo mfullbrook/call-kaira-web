@@ -4,7 +4,7 @@ import { ArrowRight, User } from 'lucide-react';
 import OnboardingProgress from '../components/OnboardingProgress';
 import OnboardingBackground from '../components/OnboardingBackground';
 import Step1Form from '../components/onboarding/Step1Form';
-import { countriesDictToArray } from '@call-kaira/frontend-commons';
+import { countriesDictToArray } from '@mfullbrook/call-kaira-frontend-commons';
 import WebsiteLayout from '../layouts/WebsiteLayout';
 
 // Memoized component to prevent unnecessary re-renders
@@ -12,21 +12,21 @@ const SectionUseAsIndividual = memo(({ onClick }: { onClick: () => void }) => (
   <div className="mt-8 pt-8 border-t border-gray-200">
     <div
       onClick={onClick}
-      className="bg-gradient-to-br from-gray-50 to-cerise-50 rounded-xl p-6 cursor-pointer hover:shadow-md transition-all duration-300 border border-gray-200"
+      className="bg-gradient-to-br from-gray-50 to-valencia-50 rounded-xl p-6 cursor-pointer hover:shadow-md transition-all duration-300 border border-gray-200"
     >
       <div className="flex items-center space-x-4">
-        <div className="w-12 h-12 bg-cerise-500 rounded-xl flex items-center justify-center">
+        <div className="w-12 h-12 bg-valencia-500 rounded-xl flex items-center justify-center">
           <User className="h-6 w-6 text-white" />
         </div>
         <div>
-          <h3 className="font-lexend font-semibold text-gray-900">
+          <h3 className="font-semibold text-gray-900">
             Use CallKaira as an individual
           </h3>
-          <p className="font-poppins text-gray-600 text-sm">
+          <p className="text-gray-600 text-sm">
             Perfect for freelancers and solo professionals
           </p>
         </div>
-        <ArrowRight className="h-5 w-5 text-cerise-500 ml-auto" />
+        <ArrowRight className="h-5 w-5 text-valencia-500 ml-auto" />
       </div>
     </div>
   </div>
@@ -62,10 +62,10 @@ export default function OnboardingStep1() {
 
           <div className="bg-white rounded-2xl border border-gray-300 p-8 max-w-2xl mx-auto">
             <div className="text-center mb-8">
-              <h1 className="font-lexend font-bold text-3xl text-gray-900 mb-4">
+              <h1 className="font-bold text-3xl text-gray-900 mb-4">
                 Let's Get Started
               </h1>
-              <p className="font-poppins text-lg text-gray-600">
+              <p className="text-lg text-gray-600">
                 Tell us about your business so we can customize CallKaira for you
               </p>
             </div>

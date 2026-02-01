@@ -10,19 +10,22 @@
   "upload_source_maps": true,
   "vars": {
     "VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare",
-    "SITE_MODE": "normal"
+    "SITE_MODE": "normal",
+    "API_BASE_URL": "http://reception.callkaira.test"
   },
   "env": {
     "production": {
       "vars": {
         "VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare",
-        "SITE_MODE": "waitlist"
+        "SITE_MODE": "waitlist",
+        "API_BASE_URL": "https://reception.callkaira.com"
       }
     },
     "staging": {
       "vars": {
         "VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare",
-        "SITE_MODE": "normal"
+        "SITE_MODE": "normal",
+        "API_BASE_URL": "https://staging.robinhq.co"
       }
     }
   }

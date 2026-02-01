@@ -32,10 +32,10 @@ export default function OnboardingStep3() {
 
           <div className="bg-white rounded-2xl border border-gray-200 p-8 max-w-3xl mx-auto">
             <div className="text-center mb-8">
-              <h1 className="font-lexend font-bold text-3xl text-gray-900 mb-4">
+              <h1 className="font-bold text-3xl text-gray-900 mb-4">
                 Call Handling Features
               </h1>
-              <p className="font-poppins text-lg text-gray-600">
+              <p className="text-lg text-gray-600">
                 Configure how you want CallKaira to handle your calls
               </p>
             </div>
@@ -43,7 +43,7 @@ export default function OnboardingStep3() {
             <div className="space-y-8">
               {/* AI is answering for */}
               <div>
-                <h2 className="font-lexend font-semibold text-xl text-gray-900 mb-4">
+                <h2 className="font-semibold text-xl text-gray-900 mb-4">
                   AI is answering for:
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -51,17 +51,17 @@ export default function OnboardingStep3() {
                     onClick={() => setAnsweringFor('individual')}
                     className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
                       answeringFor === 'individual'
-                        ? 'border-cerise-500 bg-cerise-50'
-                        : 'border-gray-200 hover:border-cerise-300'
+                        ? 'border-valencia-500 bg-valencia-50'
+                        : 'border-gray-200 hover:border-valencia-300'
                     }`}
                   >
                     <div className="flex items-center space-x-3 mb-3">
-                      <User className={`h-6 w-6 ${answeringFor === 'individual' ? 'text-cerise-500' : 'text-gray-500'}`} />
-                      <h3 className="font-lexend font-semibold text-lg text-gray-900">
+                      <User className={`h-6 w-6 ${answeringFor === 'individual' ? 'text-valencia-500' : 'text-gray-500'}`} />
+                      <h3 className="font-semibold text-lg text-gray-900">
                         Just you
                       </h3>
                     </div>
-                    <p className="font-poppins text-gray-600">
+                    <p className="text-gray-600">
                       Perfect for solo professionals who need reliable call handling
                     </p>
                   </div>
@@ -70,17 +70,17 @@ export default function OnboardingStep3() {
                     onClick={() => setAnsweringFor('receptionist')}
                     className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
                       answeringFor === 'receptionist'
-                        ? 'border-cerise-500 bg-cerise-50'
-                        : 'border-gray-200 hover:border-cerise-300'
+                        ? 'border-valencia-500 bg-valencia-50'
+                        : 'border-gray-200 hover:border-valencia-300'
                     }`}
                   >
                     <div className="flex items-center space-x-3 mb-3">
-                      <Users className={`h-6 w-6 ${answeringFor === 'receptionist' ? 'text-cerise-500' : 'text-gray-500'}`} />
-                      <h3 className="font-lexend font-semibold text-lg text-gray-900">
+                      <Users className={`h-6 w-6 ${answeringFor === 'receptionist' ? 'text-valencia-500' : 'text-gray-500'}`} />
+                      <h3 className="font-semibold text-lg text-gray-900">
                         As a receptionist
                       </h3>
                     </div>
-                    <p className="font-poppins text-gray-600">
+                    <p className="text-gray-600">
                       Professional front desk experience for your business
                     </p>
                   </div>
@@ -89,7 +89,7 @@ export default function OnboardingStep3() {
 
               {/* Call handling options */}
               <div>
-                <h2 className="font-lexend font-semibold text-xl text-gray-900 mb-4">
+                <h2 className="font-semibold text-xl text-gray-900 mb-4">
                   Then Kyra answers the call:
                 </h2>
                 <div className="space-y-4">
@@ -97,17 +97,17 @@ export default function OnboardingStep3() {
                     onClick={() => setCallOption('all')}
                     className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
                       callOption === 'all'
-                        ? 'border-cerise-500 bg-cerise-50'
-                        : 'border-gray-200 hover:border-cerise-300'
+                        ? 'border-valencia-500 bg-valencia-50'
+                        : 'border-gray-200 hover:border-valencia-300'
                     }`}
                   >
                     <div className="flex items-center space-x-3 mb-2">
-                      <Phone className={`h-6 w-6 ${callOption === 'all' ? 'text-cerise-500' : 'text-gray-500'}`} />
-                      <h3 className="font-lexend font-semibold text-lg text-gray-900">
+                      <Phone className={`h-6 w-6 ${callOption === 'all' ? 'text-valencia-500' : 'text-gray-500'}`} />
+                      <h3 className="font-semibold text-lg text-gray-900">
                         AI to answer all calls
                       </h3>
                     </div>
-                    <p className="font-poppins text-gray-600">
+                    <p className="text-gray-600">
                       Complete call handling solution - every call is answered professionally
                     </p>
                   </div>
@@ -116,20 +116,20 @@ export default function OnboardingStep3() {
                     onClick={() => setCallOption('missed')}
                     className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
                       callOption === 'missed'
-                        ? 'border-cerise-500 bg-cerise-50'
-                        : 'border-gray-200 hover:border-cerise-300'
+                        ? 'border-valencia-500 bg-valencia-50'
+                        : 'border-gray-200 hover:border-valencia-300'
                     }`}
                   >
                     <div className="flex items-center space-x-3 mb-2">
-                      <Clock className={`h-6 w-6 ${callOption === 'missed' ? 'text-cerise-500' : 'text-gray-500'}`} />
-                      <h3 className="font-lexend font-semibold text-lg text-gray-900">
+                      <Clock className={`h-6 w-6 ${callOption === 'missed' ? 'text-valencia-500' : 'text-gray-500'}`} />
+                      <h3 className="font-semibold text-lg text-gray-900">
                         AI to handle missed calls instead of voicemail
                       </h3>
-                      <span className="bg-cerise-500 text-white px-2 py-1 rounded-full text-xs font-poppins font-medium">
+                      <span className="bg-valencia-500 text-white px-2 py-1 rounded-full text-xs font-medium">
                         Most Popular
                       </span>
                     </div>
-                    <p className="font-poppins text-gray-600">
+                    <p className="text-gray-600">
                       Smart alternative to voicemail - AI can answer frequently asked questions and capture leads effectively
                     </p>
                   </div>
@@ -138,7 +138,7 @@ export default function OnboardingStep3() {
 
               {/* Call handling features */}
               <div>
-                <h2 className="font-lexend font-semibold text-xl text-gray-900 mb-4">
+                <h2 className="font-semibold text-xl text-gray-900 mb-4">
                   Call handling features:
                 </h2>
                 <div className="space-y-4">
@@ -146,26 +146,26 @@ export default function OnboardingStep3() {
                     onClick={() => toggleCallFeature('hours')}
                     className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
                       callFeatures.includes('hours')
-                        ? 'border-cerise-500 bg-cerise-50'
-                        : 'border-gray-200 hover:border-cerise-300'
+                        ? 'border-valencia-500 bg-valencia-50'
+                        : 'border-gray-200 hover:border-valencia-300'
                     }`}
                   >
                     <div className="flex items-center space-x-3 mb-2">
                       <div className={`w-6 h-6 rounded border-2 flex items-center justify-center ${
                         callFeatures.includes('hours')
-                          ? 'bg-cerise-500 border-cerise-500'
+                          ? 'bg-valencia-500 border-valencia-500'
                           : 'border-gray-400'
                       }`}>
                         {callFeatures.includes('hours') && (
                           <Check className="h-4 w-4 text-white" />
                         )}
                       </div>
-                      <Moon className={`h-6 w-6 ${callFeatures.includes('hours') ? 'text-cerise-500' : 'text-gray-500'}`} />
-                      <h3 className="font-lexend font-semibold text-lg text-gray-900">
+                      <Moon className={`h-6 w-6 ${callFeatures.includes('hours') ? 'text-valencia-500' : 'text-gray-500'}`} />
+                      <h3 className="font-semibold text-lg text-gray-900">
                         AI to handle out of hours calls
                       </h3>
                     </div>
-                    <p className="font-poppins text-gray-600">
+                    <p className="text-gray-600">
                       After-hours and weekend call handling when you're unavailable
                     </p>
                   </div>
@@ -174,26 +174,26 @@ export default function OnboardingStep3() {
                     onClick={() => toggleCallFeature('urgent')}
                     className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
                       callFeatures.includes('urgent')
-                        ? 'border-cerise-500 bg-cerise-50'
-                        : 'border-gray-200 hover:border-cerise-300'
+                        ? 'border-valencia-500 bg-valencia-50'
+                        : 'border-gray-200 hover:border-valencia-300'
                     }`}
                   >
                     <div className="flex items-center space-x-3 mb-2">
                       <div className={`w-6 h-6 rounded border-2 flex items-center justify-center ${
                         callFeatures.includes('urgent')
-                          ? 'bg-cerise-500 border-cerise-500'
+                          ? 'bg-valencia-500 border-valencia-500'
                           : 'border-gray-400'
                       }`}>
                         {callFeatures.includes('urgent') && (
                           <Check className="h-4 w-4 text-white" />
                         )}
                       </div>
-                      <Phone className={`h-6 w-6 ${callFeatures.includes('urgent') ? 'text-cerise-500' : 'text-gray-500'}`} />
-                      <h3 className="font-lexend font-semibold text-lg text-gray-900">
+                      <Phone className={`h-6 w-6 ${callFeatures.includes('urgent') ? 'text-valencia-500' : 'text-gray-500'}`} />
+                      <h3 className="font-semibold text-lg text-gray-900">
                         Transfer urgent calls
                       </h3>
                     </div>
-                    <p className="font-poppins text-gray-600">
+                    <p className="text-gray-600">
                       Automatically transfer urgent or priority calls to your phone when available
                     </p>
                   </div>
@@ -202,7 +202,7 @@ export default function OnboardingStep3() {
 
               <button
                 onClick={handleNext}
-                className="w-full bg-cerise-500 text-white px-8 py-4 rounded-full font-poppins font-semibold text-lg hover:bg-cerise-600 transition-all duration-300 flex items-center justify-center group"
+                className="w-full bg-valencia-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-valencia-600 transition-all duration-300 flex items-center justify-center group"
               >
                 Continue
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

@@ -15,9 +15,9 @@ const Hero = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 ">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left pb-10">
-            <SectionHeading size="xl" className="mb-6 leading-tight" as="h1">
+            <SectionHeading size="xl" className=" font-satoshi mb-6 leading-tight" as="h1">
               Never Miss Another Call,{' '}
-              <span className="text-cerise-500">Ever.</span>
+              <span className="font-satoshi text-valencia-500">Ever.</span>
             </SectionHeading>
             <BodyText size="lg" className="mb-8 max-w-2xl">
               CallKaira is your 24/7 AI receptionist answering every call instantly, capturing leads,
@@ -43,15 +43,15 @@ const Hero = () => {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-sm">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="font-poppins text-gray-700">Early access available</span>
+                <span className="text-gray-700">Early access available</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="font-poppins text-gray-700">No commitment required</span>
+                <span className="text-gray-700">No commitment required</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="font-poppins text-gray-700">Be the first to know</span>
+                <span className="text-gray-700">Be the first to know</span>
               </div>
             </div>
           </div>

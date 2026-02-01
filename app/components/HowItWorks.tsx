@@ -42,10 +42,10 @@ const HowItWorks = () => {
               <FeatureCard className="h-full">
                 <div className="flex items-center justify-between mb-6">
                   <IconContainer Icon={step.icon} />
-                  <span className="font-lexend font-bold text-3xl text-cerise-200">{step.step}</span>
+                  <span className="font-bold text-3xl text-valencia-200">{step.step}</span>
                 </div>
                 
-                <h3 className="font-lexend font-semibold text-xl text-gray-900 mb-4">
+                <h3 className="font-semibold text-xl text-gray-900 mb-4">
                   {step.title}
                 </h3>
                 <BodyText className="leading-relaxed">

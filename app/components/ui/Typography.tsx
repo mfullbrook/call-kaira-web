@@ -20,7 +20,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     xl: 'text-4xl sm:text-5xl lg:text-6xl'
   };
 
-  const classes = `font-lexend font-bold ${sizeClasses[size]} text-gray-900 ${className}`;
+  const classes = `font-bold ${sizeClasses[size]} text-gray-900 ${className}`;
 
   return <Component className={classes}>{children}</Component>;
 };
@@ -52,7 +52,7 @@ export const BodyText: React.FC<BodyTextProps> = ({
     white: 'text-white'
   };
 
-  const classes = `font-poppins ${sizeClasses[size]} ${colorClasses[color]} ${className}`;
+  const classes = `${sizeClasses[size]} ${colorClasses[color]} ${className}`;
 
   return <Component className={classes}>{children}</Component>;
 };

@@ -82,13 +82,13 @@ export default function OnboardingStep4() {
 
           <div className="bg-white rounded-2xl border border-gray-200 p-8 max-w-3xl mx-auto">
             <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-cerise-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Building className="h-8 w-8 text-cerise-500" />
+              <div className="w-16 h-16 bg-valencia-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Building className="h-8 w-8 text-valencia-500" />
               </div>
-              <h1 className="font-lexend font-bold text-3xl text-gray-900 mb-4">
+              <h1 className="font-bold text-3xl text-gray-900 mb-4">
                 Business Information
               </h1>
-              <p className="font-poppins text-lg text-gray-600">
+              <p className="text-lg text-gray-600">
                 Help us understand your business better to provide the best AI assistance
               </p>
             </div>
@@ -96,13 +96,13 @@ export default function OnboardingStep4() {
             <div className="space-y-8">
               {/* Industry */}
               <div>
-                <label className="block font-lexend font-medium text-gray-900 mb-2">
+                <label className="block font-medium text-gray-900 mb-2">
                   Industry
                 </label>
                 <select
                   value={companyInfo.industry}
                   onChange={(e) => handleInputChange('industry', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg font-poppins focus:outline-none focus:border-cerise-500 focus:ring-2 focus:ring-cerise-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-valencia-500 focus:ring-2 focus:ring-valencia-500"
                 >
                   {industries.map(industry => (
                     <option key={industry} value={industry}>{industry}</option>
@@ -112,13 +112,13 @@ export default function OnboardingStep4() {
 
               {/* Company Size */}
               <div>
-                <label className="block font-lexend font-medium text-gray-900 mb-2">
+                <label className="block font-medium text-gray-900 mb-2">
                   Company Size
                 </label>
                 <select
                   value={companyInfo.companySize}
                   onChange={(e) => handleInputChange('companySize', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg font-poppins focus:outline-none focus:border-cerise-500 focus:ring-2 focus:ring-cerise-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-valencia-500 focus:ring-2 focus:ring-valencia-500"
                 >
                   {companySizes.map(size => (
                     <option key={size} value={size}>{size}</option>
@@ -128,14 +128,14 @@ export default function OnboardingStep4() {
 
               {/* Business Overview */}
               <div>
-                <label className="block font-lexend font-medium text-gray-900 mb-2">
+                <label className="block font-medium text-gray-900 mb-2">
                   Business Overview
                 </label>
                 <textarea
                   value={companyInfo.overview}
                   onChange={(e) => handleInputChange('overview', e.target.value)}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg font-poppins focus:outline-none focus:border-cerise-500 focus:ring-2 focus:ring-cerise-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-valencia-500 focus:ring-2 focus:ring-valencia-500"
                   placeholder="Describe your business, what you do, and what makes you unique..."
                 />
               </div>
@@ -144,14 +144,14 @@ export default function OnboardingStep4() {
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
-                    <HelpCircle className="h-5 w-5 text-cerise-500" />
-                    <h2 className="font-lexend font-semibold text-xl text-gray-900">
+                    <HelpCircle className="h-5 w-5 text-valencia-500" />
+                    <h2 className="font-semibold text-xl text-gray-900">
                       Frequently Asked Questions
                     </h2>
                   </div>
                   <button
                     onClick={addFAQ}
-                    className="flex items-center space-x-2 text-cerise-500 hover:text-cerise-600 font-poppins text-sm"
+                    className="flex items-center space-x-2 text-valencia-500 hover:text-valencia-600 text-sm"
                   >
                     <Plus className="h-4 w-4" />
                     <span>Add FAQ</span>
@@ -168,14 +168,14 @@ export default function OnboardingStep4() {
                             value={faq.question}
                             onChange={(e) => updateFAQ(faq.id, 'question', e.target.value)}
                             placeholder="Question"
-                            className="w-full px-3 py-2 border border-gray-300 rounded-lg font-poppins text-sm focus:outline-none focus:border-cerise-500"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-valencia-500"
                           />
                           <textarea
                             value={faq.answer}
                             onChange={(e) => updateFAQ(faq.id, 'answer', e.target.value)}
                             placeholder="Answer"
                             rows={2}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-lg font-poppins text-sm focus:outline-none focus:border-cerise-500"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-valencia-500"
                           />
                         </div>
                         <button
@@ -192,7 +192,7 @@ export default function OnboardingStep4() {
 
               <button
                 onClick={handleNext}
-                className="w-full bg-cerise-500 text-white px-8 py-4 rounded-full font-poppins font-semibold text-lg hover:bg-cerise-600 transition-all duration-300 flex items-center justify-center group"
+                className="w-full bg-valencia-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-valencia-600 transition-all duration-300 flex items-center justify-center group"
               >
                 Continue
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

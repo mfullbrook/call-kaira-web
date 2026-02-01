@@ -123,13 +123,13 @@ const LearningProgress: React.FC<LearningProgressProps> = ({
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <h3 className="font-lexend font-semibold text-xl text-gray-900 mb-8">
+        <h3 className="font-semibold text-xl text-gray-900 mb-8">
           {currentMessage}
         </h3>
         {hasError && (
           <div className="flex items-center justify-center space-x-2 text-yellow-600 mb-4">
             <AlertCircle className="h-4 w-4" />
-            <span className="font-poppins text-sm">Using fallback mode</span>
+            <span className="text-sm">Using fallback mode</span>
           </div>
         )}
       </div>
@@ -139,16 +139,16 @@ const LearningProgress: React.FC<LearningProgressProps> = ({
           <div key={item.id} className="flex items-center space-x-4">
             <div className="flex-shrink-0">
               {item.completed ? (
-                <div className="w-6 h-6 bg-cerise-500 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-valencia-500 rounded-full flex items-center justify-center">
                   <Check className="h-4 w-4 text-white" />
                 </div>
               ) : (
-                <div className="w-6 h-6 border-2 border-cerise-500 rounded-full flex items-center justify-center">
-                  <Loader className="h-4 w-4 text-cerise-500 animate-spin" />
+                <div className="w-6 h-6 border-2 border-valencia-500 rounded-full flex items-center justify-center">
+                  <Loader className="h-4 w-4 text-valencia-500 animate-spin" />
                 </div>
               )}
             </div>
-            <span className={`font-poppins text-lg transition-colors duration-300 ${
+            <span className={`text-lg transition-colors duration-300 ${
               item.completed ? 'text-gray-900' : 'text-gray-400'
             }`}>
               {item.label}

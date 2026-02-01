@@ -35,11 +35,6 @@ import type {
 } from '../app-client/types.gen';
 import { createAuthenticatedClient, getStoredToken } from './auth';
 
-// Configure the base client
-const API_BASE_URL = typeof window !== 'undefined'
-  ? `${window.location.protocol}//${window.location.hostname}:8000`
-  : 'http://localhost:8000';
-
 // Error handling utility
 export class ApiError extends Error {
   constructor(

@@ -105,7 +105,7 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose }) => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cerise-500 focus:border-cerise-500 outline-none transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-valencia-500 focus:border-valencia-500 outline-none transition-colors"
                   disabled={isLoading}
                 />
                 {error && (
@@ -116,7 +116,7 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose }) => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-cerise-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-cerise-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="w-full bg-valencia-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-valencia-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 {isLoading ? 'Joining...' : 'Join'}
               </button>
@@ -138,7 +138,7 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose }) => {
             </p>
             <button
               onClick={handleClose}
-              className="bg-cerise-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-cerise-600 transition-colors"
+              className="bg-valencia-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-valencia-600 transition-colors"
             >
               Close
             </button>

@@ -27,8 +27,8 @@ export const IconContainer: React.FC<IconContainerProps> = ({
   };
 
   const variantClasses = {
-    cerise: 'bg-cerise-500 text-white',
-    white: 'bg-white text-cerise-500',
+    cerise: 'bg-valencia-500 text-white',
+    white: 'bg-white text-valencia-500',
     gray: 'bg-gray-100 text-gray-600'
   };
 

@@ -28,11 +28,11 @@ const Step1BusinessNameInput =
             onChange(e.target.value)
           }}
           placeholder="Your business name"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg font-poppins focus:outline-none focus:border-cerise-500 focus:ring-2 focus:ring-cerise-500"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-valencia-500 focus:ring-2 focus:ring-valencia-500"
         />
         <button
           type="button"
-          className="text-cerise-500 hover:text-cerise-600 font-poppins text-sm underline"
+          className="text-valencia-500 hover:text-valencia-600 text-sm underline"
           onClick={onSearchMode}
         >
           ← Search for business instead

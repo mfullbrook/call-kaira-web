@@ -39,12 +39,12 @@ export const PrimaryButton: React.FC<ButtonProps & {
 }) => {
   // Create buttonProps with children included
   const buttonProps = { children, ...props };
-  const baseClasses = "px-8 py-4 rounded-full font-poppins font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center group";
+  const baseClasses = "px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center group";
 
   const variantClasses = {
-    default: "bg-cerise-500 text-white hover:bg-cerise-600",
-    white: "bg-white text-cerise-500 hover:bg-gray-100",
-    large: "bg-cerise-500 text-white text-lg hover:bg-cerise-600"
+    default: "bg-valencia-500 text-white hover:bg-valencia-600",
+    white: "bg-white text-valencia-500 hover:bg-gray-100",
+    large: "bg-valencia-500 text-white text-lg hover:bg-valencia-600"
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
@@ -97,11 +97,11 @@ export const SecondaryButton: React.FC<ButtonProps & {
 }) => {
   // Create buttonProps with children included
   const buttonProps = { children, ...props };
-  const baseClasses = "px-8 py-4 rounded-full font-poppins font-semibold transition-all duration-300 flex items-center justify-center group";
+  const baseClasses = "px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center justify-center group";
 
   const variantClasses = {
-    default: "border-2 border-cerise-500 text-cerise-500 hover:bg-cerise-500 hover:text-white",
-    white: "border-2 border-white text-white hover:bg-white hover:text-cerise-500"
+    default: "border-2 border-valencia-500 text-valencia-500 hover:bg-valencia-500 hover:text-white",
+    white: "border-2 border-white text-white hover:bg-white hover:text-valencia-500"
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;

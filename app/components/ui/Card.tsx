@@ -55,7 +55,7 @@ export const GradientCard: React.FC<GradientCardProps> = ({
   };
 
   const gradientClasses = {
-    cerise: 'bg-gradient-to-br from-gray-50 to-cerise-50',
+    cerise: 'bg-gradient-to-br from-gray-50 to-valencia-50',
     gray: 'bg-gradient-to-br from-gray-50 to-gray-100', 
     blue: 'bg-gradient-to-br from-blue-50 to-indigo-50'
   };
@@ -83,16 +83,16 @@ export const StepCard: React.FC<StepCardProps> = ({
   return (
     <FeatureCard className={`h-full ${className}`}>
       <div className="flex items-center justify-between mb-6">
-        <div className="w-12 h-12 bg-cerise-500 rounded-xl flex items-center justify-center">
+        <div className="w-12 h-12 bg-valencia-500 rounded-xl flex items-center justify-center">
           <Icon className="h-6 w-6 text-white" />
         </div>
-        <span className="font-lexend font-bold text-3xl text-cerise-200">{step}</span>
+        <span className="font-bold text-3xl text-valencia-200">{step}</span>
       </div>
       
-      <h3 className="font-lexend font-semibold text-xl text-gray-900 mb-4">
+      <h3 className="font-semibold text-xl text-gray-900 mb-4">
         {title}
       </h3>
-      <p className="font-poppins text-gray-600 leading-relaxed">
+      <p className="text-gray-600 leading-relaxed">
         {description}
       </p>
     </FeatureCard>

@@ -120,7 +120,7 @@ npm run deploy:production
 ## Design System
 
 ### Colors (Cerise Theme)
-- Primary: `cerise-500` (#e82e71) - Brand color
+- Primary: `valencia-500` (#e82e71) - Brand color
 - Supporting: Gray scale for text and backgrounds
 
 ### Typography
@@ -153,7 +153,7 @@ Deployment happens automatically via GitHub integration or manual deployment usi
 - **API Client:** Hey-API setup in `app/app-client/`
 - **Services Layer:** Copied to `app/services/` for API integration
 - **Components:** All onboarding components migrated and imports updated
-- **Shared Code:** Logo, LogoType, utilities from `@call-kaira/frontend-commons`
+- **Shared Code:** Logo, LogoType, utilities from `@mfullbrook/call-kaira-frontend-commons`
 - **Supporting Components:** BusinessPicker, CountryPicker, LearningProgress, OnboardingProgress, OnboardingBackground
 
 ### 🔄 Next Steps (API Integration):
@@ -169,6 +169,6 @@ Deployment happens automatically via GitHub integration or manual deployment usi
 ### 📝 Implementation Notes:
 - All forms use standard React form submission instead of Inertia.js
 - Navigation uses React Router `useNavigate()` instead of Inertia `router.visit()`
-- Shared utilities (Country, Place, locale functions) imported from `@call-kaira/frontend-commons`
+- Shared utilities (Country, Place, locale functions) imported from `@mfullbrook/call-kaira-frontend-commons`
 - API service layer ready in `app/services/` for integration
 - All components follow React Router v7 patterns

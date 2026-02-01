@@ -2,7 +2,7 @@ import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router";
 import Step1BusinessNameInput from "./Step1BusinessNameInput";
 import BusinessPicker, { BusinessDisplay } from "../BusinessPicker";
-import { googlePlaceDataToPlace, getUserLocaleCountry, getCountryByCode, Country, Place } from "@call-kaira/frontend-commons";
+import { googlePlaceDataToPlace, getUserLocaleCountry, getCountryByCode, Country, Place } from "@mfullbrook/call-kaira-frontend-commons";
 import { X } from "lucide-react";
 import CountryPicker from "../CountryPicker";
 import SubmitButton from "./SubmitButton";
@@ -98,7 +98,7 @@ const Step1Form = ({supportedCountries, onboarding}: Step1FormProps) => {
       )}
 
           <div>
-            <label className="block font-lexend font-medium text-gray-900 mb-2">
+            <label className="block font-medium text-gray-900 mb-2">
               Country
             </label>
             <CountryPicker
@@ -110,7 +110,7 @@ const Step1Form = ({supportedCountries, onboarding}: Step1FormProps) => {
 
 
           <div className="space-y-4">
-            <label className="block font-lexend font-medium text-gray-900 mb-2">
+            <label className="block font-medium text-gray-900 mb-2">
               {useManualEntry ? 'Business Name' : 'Business Search'}
             </label>
 
@@ -141,7 +141,7 @@ const Step1Form = ({supportedCountries, onboarding}: Step1FormProps) => {
                 <button
                   type="button"
                   onClick={handleManualMode}
-                  className="text-cerise-500 hover:text-cerise-600 font-poppins text-sm underline"
+                  className="text-valencia-500 hover:text-valencia-600 text-sm underline"
                 >
                   Business not found? Enter manually →
                 </button>

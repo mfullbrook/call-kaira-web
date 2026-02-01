@@ -13,7 +13,7 @@ function WebsiteLayoutInner({ children, showFooter = true }: WebsiteLayoutProps)
   const { isModalOpen, closeModal } = useWaitlist();
 
   return (
-    <div className="min-h-screen bg-white font-poppins">
+    <div className="min-h-screen bg-white">
       <Navbar />
       {children}
       {showFooter && <Footer />}

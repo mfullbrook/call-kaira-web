@@ -103,10 +103,10 @@ const Professions = () => {
                 <div className="flex items-start space-x-4">
                   <IconContainer Icon={profession.icon} className="flex-shrink-0" />
                   <div className="flex-1">
-                    <h3 className="font-lexend font-semibold text-xl text-gray-900 mb-1">
+                    <h3 className="font-semibold text-xl text-gray-900 mb-1">
                       {profession.title}
                     </h3>
-                    <p className="font-poppins text-cerise-600 text-sm font-medium mb-3">
+                    <p className="text-valencia-600 text-sm font-medium mb-3">
                       {profession.subtitle}
                     </p>
                   </div>
@@ -119,15 +119,15 @@ const Professions = () => {
                 <ul className="space-y-2 mb-4">
                   {profession.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-2">
-                      <div className="w-1.5 h-1.5 bg-cerise-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="font-poppins text-sm text-gray-700">{feature}</span>
+                      <div className="w-1.5 h-1.5 bg-valencia-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 {profession.note && (
                   <div className="mt-auto pt-4 border-t border-gray-100">
-                    <p className="font-poppins text-sm text-gray-600 italic">
+                    <p className="text-sm text-gray-600 italic">
                       {profession.note}
                     </p>
                   </div>

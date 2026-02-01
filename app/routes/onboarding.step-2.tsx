@@ -102,13 +102,13 @@ export default function OnboardingStep2() {
 
           <div className="bg-white rounded-2xl border border-gray-200 p-8 max-w-2xl mx-auto">
             <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-cerise-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Globe className="h-8 w-8 text-cerise-500" />
+              <div className="w-16 h-16 bg-valencia-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Globe className="h-8 w-8 text-valencia-500" />
               </div>
-              <h1 className="font-lexend font-bold text-3xl text-gray-900 mb-4">
+              <h1 className="font-bold text-3xl text-gray-900 mb-4">
                 Your Website
               </h1>
-              <p className="font-poppins text-lg text-gray-600">
+              <p className="text-lg text-gray-600">
                 We'll analyze your website to understand your business and create a personalized AI assistant
               </p>
             </div>
@@ -116,7 +116,7 @@ export default function OnboardingStep2() {
             {!websiteCrawlStarted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block font-lexend font-medium text-gray-900 mb-2">
+                  <label className="block font-medium text-gray-900 mb-2">
                     Website Address
                   </label>
                   <input
@@ -125,10 +125,10 @@ export default function OnboardingStep2() {
                     value={website}
                     onChange={handleWebsiteChange}
                     placeholder="www.yourcompany.com"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg font-poppins focus:outline-none focus:border-cerise-500 focus:ring-2 focus:ring-cerise-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-valencia-500 focus:ring-2 focus:ring-valencia-500"
                   />
                   {error && (
-                    <p className="mt-2 text-red-600 font-poppins text-sm">
+                    <p className="mt-2 text-red-600 text-sm">
                       {error}
                     </p>
                   )}
@@ -146,7 +146,7 @@ export default function OnboardingStep2() {
                   <button
                     type="button"
                     onClick={handleSkip}
-                    className="text-gray-500 hover:text-cerise-500 font-poppins text-sm underline inline-flex items-center"
+                    className="text-gray-500 hover:text-valencia-500 text-sm underline inline-flex items-center"
                   >
                     I don't have a website yet, skip this step for now
                     <ArrowRight className="ml-2 h-4 w-4" />

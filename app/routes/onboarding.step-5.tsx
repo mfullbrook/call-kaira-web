@@ -55,13 +55,13 @@ export default function OnboardingStep5() {
 
           <div className="bg-white rounded-2xl border border-gray-300 p-8 max-w-3xl mx-auto">
             <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-cerise-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Phone className="h-8 w-8 text-cerise-500" />
+              <div className="w-16 h-16 bg-valencia-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Phone className="h-8 w-8 text-valencia-500" />
               </div>
-              <h1 className="font-lexend font-bold text-3xl text-gray-900 mb-4">
+              <h1 className="font-bold text-3xl text-gray-900 mb-4">
                 Test Your AI Assistant
               </h1>
-              <p className="font-poppins text-lg text-gray-600">
+              <p className="text-lg text-gray-600">
                 Ready to experience CallKaira in action? Give us your phone number and call our test line.
               </p>
             </div>
@@ -70,13 +70,13 @@ export default function OnboardingStep5() {
               <div className="space-y-6">
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
-                    <label className="block font-lexend font-medium text-gray-900 mb-2">
+                    <label className="block font-medium text-gray-900 mb-2">
                       Country
                     </label>
                     <select
                       value={country}
                       onChange={(e) => setCountry(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg font-poppins focus:outline-none focus:border-cerise-500 focus:ring-2 focus:ring-cerise-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-valencia-500 focus:ring-2 focus:ring-valencia-500"
                     >
                       <option value="UK">🇬🇧 UK</option>
                       <option value="US">🇺🇸 US</option>
@@ -84,7 +84,7 @@ export default function OnboardingStep5() {
                     </select>
                   </div>
                   <div className="md:col-span-2">
-                    <label className="block font-lexend font-medium text-gray-900 mb-2">
+                    <label className="block font-medium text-gray-900 mb-2">
                       Your Phone Number
                     </label>
                     <input
@@ -92,21 +92,21 @@ export default function OnboardingStep5() {
                       value={phoneNumber}
                       onChange={(e) => setPhoneNumber(e.target.value)}
                       placeholder="Enter your phone number"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg font-poppins focus:outline-none focus:border-cerise-500 focus:ring-2 focus:ring-cerise-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-valencia-500 focus:ring-2 focus:ring-valencia-500"
                     />
                   </div>
                 </div>
 
-                <div className="bg-cerise-50 rounded-lg p-6">
-                  <h3 className="font-lexend font-semibold text-cerise-900 mb-3">
+                <div className="bg-valencia-50 rounded-lg p-6">
+                  <h3 className="font-semibold text-valencia-900 mb-3">
                     Test Number for {country}:
                   </h3>
-                  <div className="bg-white rounded-lg p-4 border border-cerise-200">
-                    <p className="font-poppins text-2xl font-bold text-cerise-600 text-center">
+                  <div className="bg-white rounded-lg p-4 border border-valencia-200">
+                    <p className="text-2xl font-bold text-valencia-600 text-center">
                       {testNumbers[country as keyof typeof testNumbers]}
                     </p>
                   </div>
-                  <p className="font-poppins text-cerise-700 text-sm mt-3 text-center">
+                  <p className="text-valencia-700 text-sm mt-3 text-center">
                     Call this number to test your AI assistant
                   </p>
                 </div>
@@ -114,7 +114,7 @@ export default function OnboardingStep5() {
                 <button
                   onClick={handleStartTest}
                   disabled={!phoneNumber.trim()}
-                  className="w-full bg-cerise-500 text-white px-8 py-4 rounded-full font-poppins font-semibold text-lg hover:bg-cerise-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center group"
+                  className="w-full bg-valencia-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-valencia-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center group"
                 >
                   I'm Ready to Test
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -124,13 +124,13 @@ export default function OnboardingStep5() {
 
             {callStatus === 'calling' && (
               <div className="text-center py-12">
-                <div className="w-24 h-24 bg-cerise-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
+                <div className="w-24 h-24 bg-valencia-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
                   <Phone className="h-12 w-12 text-white" />
                 </div>
-                <h2 className="font-lexend font-bold text-2xl text-gray-900 mb-4">
+                <h2 className="font-bold text-2xl text-gray-900 mb-4">
                   Call in Progress
                 </h2>
-                <p className="font-poppins text-lg text-gray-600">
+                <p className="text-lg text-gray-600">
                   Your AI assistant is handling the call...
                 </p>
               </div>
@@ -139,10 +139,10 @@ export default function OnboardingStep5() {
             {callStatus === 'ended' && !feedback && (
               <div className="space-y-6">
                 <div className="text-center mb-8">
-                  <h2 className="font-lexend font-bold text-2xl text-gray-900 mb-4">
+                  <h2 className="font-bold text-2xl text-gray-900 mb-4">
                     How was your call experience?
                   </h2>
-                  <p className="font-poppins text-lg text-gray-600">
+                  <p className="text-lg text-gray-600">
                     Your feedback helps us improve CallKaira
                   </p>
                 </div>
@@ -154,11 +154,11 @@ export default function OnboardingStep5() {
                   >
                     <div className="flex items-center space-x-3 mb-2">
                       <Heart className="h-6 w-6 text-green-600" />
-                      <h3 className="font-lexend font-semibold text-green-900">
+                      <h3 className="font-semibold text-green-900">
                         Love it! Sign me up now
                       </h3>
                     </div>
-                    <p className="font-poppins text-green-700 text-sm">
+                    <p className="text-green-700 text-sm">
                       Get double the free credits
                     </p>
                   </button>
@@ -169,11 +169,11 @@ export default function OnboardingStep5() {
                   >
                     <div className="flex items-center space-x-3 mb-2">
                       <ThumbsUp className="h-6 w-6 text-blue-600" />
-                      <h3 className="font-lexend font-semibold text-blue-900">
+                      <h3 className="font-semibold text-blue-900">
                         I like it, but want to try more
                       </h3>
                     </div>
-                    <p className="font-poppins text-blue-700 text-sm">
+                    <p className="text-blue-700 text-sm">
                       Continue with your trial
                     </p>
                   </button>
@@ -184,11 +184,11 @@ export default function OnboardingStep5() {
                   >
                     <div className="flex items-center space-x-3 mb-2">
                       <Settings className="h-6 w-6 text-orange-600" />
-                      <h3 className="font-lexend font-semibold text-orange-900">
+                      <h3 className="font-semibold text-orange-900">
                         I want to test more configurations
                       </h3>
                     </div>
-                    <p className="font-poppins text-orange-700 text-sm">
+                    <p className="text-orange-700 text-sm">
                       Go back and adjust settings
                     </p>
                   </button>
@@ -199,11 +199,11 @@ export default function OnboardingStep5() {
                   >
                     <div className="flex items-center space-x-3 mb-2">
                       <X className="h-6 w-6 text-gray-600" />
-                      <h3 className="font-lexend font-semibold text-gray-900">
+                      <h3 className="font-semibold text-gray-900">
                         Not convinced, delete my data
                       </h3>
                     </div>
-                    <p className="font-poppins text-gray-700 text-sm">
+                    <p className="text-gray-700 text-sm">
                       I'll stick with regular voicemail
                     </p>
                   </button>
@@ -213,10 +213,10 @@ export default function OnboardingStep5() {
 
             {feedback && (
               <div className="text-center py-12">
-                <h2 className="font-lexend font-bold text-2xl text-gray-900 mb-4">
+                <h2 className="font-bold text-2xl text-gray-900 mb-4">
                   Thank you for your feedback!
                 </h2>
-                <p className="font-poppins text-lg text-gray-600">
+                <p className="text-lg text-gray-600">
                   We appreciate you taking the time to test CallKaira.
                 </p>
               </div>

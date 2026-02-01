@@ -1,5 +1,5 @@
 import { MicOff, Grid3X3, Volume2, BatteryFull } from 'lucide-react';
-import { Logo } from '@call-kaira/frontend-commons';
+import { Logo } from '@mfullbrook/call-kaira-frontend-commons';
 
 function IphoneMock() {
   return (
@@ -29,8 +29,8 @@ function IphoneMock() {
 
             {/* Call Header */}
             <div className="text-center px-6 mb-6">
-              <p className="text-gray-400 text-sm font-poppins">+44 20 1234 5678</p>
-              <h3 className="text-white text-xl font-bold font-lexend mt-1">CallKaira AI</h3>
+              <p className="text-gray-400 text-sm">+44 20 1234 5678</p>
+              <h3 className="text-white text-xl font-bold mt-1">CallKaira AI</h3>
             </div>
 
             {/* Chat Messages */}
@@ -40,15 +40,15 @@ function IphoneMock() {
                 <div className="flex-shrink-0">
                   <Logo width={32} height={32} />
                 </div>
-                <div className="bg-cerise-500 rounded-2xl rounded-tl-md px-4 py-3 max-w-xs">
-                  <p className="text-white text-sm font-poppins">Hello! Thank you for calling. How can I help you today?</p>
+                <div className="bg-valencia-500 rounded-2xl rounded-tl-md px-4 py-3 max-w-xs">
+                  <p className="text-white text-sm">Hello! Thank you for calling. How can I help you today?</p>
                 </div>
               </div>
 
               {/* User Message */}
               <div className="flex justify-end">
                 <div className="bg-gray-700 rounded-2xl rounded-tr-md px-4 py-3 max-w-xs">
-                  <p className="text-white text-sm font-poppins">"I'd like to schedule an appointment for next week."</p>
+                  <p className="text-white text-sm">"I'd like to schedule an appointment for next week."</p>
                 </div>
               </div>
 
@@ -57,8 +57,8 @@ function IphoneMock() {
                 <div className="flex-shrink-0">
                   <Logo width={32} height={32} />
                 </div>
-                <div className="bg-cerise-500 rounded-2xl rounded-tl-md px-4 py-3 max-w-xs">
-                  <p className="text-white text-sm font-poppins">Perfect! I can check our availability. What day works best for you?</p>
+                <div className="bg-valencia-500 rounded-2xl rounded-tl-md px-4 py-3 max-w-xs">
+                  <p className="text-white text-sm">Perfect! I can check our availability. What day works best for you?</p>
                 </div>
               </div>
             </div>
