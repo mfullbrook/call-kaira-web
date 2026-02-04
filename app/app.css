@@ -22,7 +22,7 @@
   --text-6xl: 3.95rem;
   --text-7xl: 5.1rem;
 
-
+/*
   --color-valencia-50: #fdedf0;
   --color-valencia-100: #fbdae1;
   --color-valencia-200: #f9b8c6;
@@ -34,7 +34,7 @@
   --color-valencia-800: #650e2d;
   --color-valencia-900: #3c0518;
   --color-valencia-950: #29020e;
-
+*/
 
   /* https://www.tints.dev/palette/v1:dmFsZW5jaWF8RDkzNDJCfDUwMHxwfDB8MHwwfDEwMHxt */
   /*
@@ -50,6 +50,7 @@
   --color-valencia-900: #3c0705;
   --color-valencia-950: #290403;
   */
+
   --color-valencia-50: oklch(0.959 0.017 17.56);
   --color-valencia-100: oklch(0.918 0.036 17.86);
   --color-valencia-200: oklch(0.828 0.081 19.9);
@@ -61,6 +62,27 @@
   --color-valencia-800: oklch(0.315 0.109 28.8);
   --color-valencia-900: oklch(0.234 0.082 28.35);
   --color-valencia-950: oklch(0.186 0.063 27.98);
+
+  /* New RobinHQ Dark Theme Colors */
+  --color-primary: #D9342B;
+  --color-primary-dark: #b0261f;
+  --color-background-dark: #0B0F19;
+  --color-surface-dark: #151B2B;
+  --color-surface-darker: #0F1320;
+  --color-text-main: #F8FAFC;
+  --color-text-muted: #94A3B8;
+  --color-accent-glow: rgba(217, 52, 43, 0.15);
+
+  /* Additional dark theme colors */
+  --color-gray-900: #0a0f1a;
+  --color-gray-800: #111827;
+  --color-gray-700: #1f2937;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
   
 }
 
@@ -82,4 +104,77 @@ h1, h2, h3, h4, h5, h6 {
 ::selection {
   background: oklch(from var(--color-valencia-500) l c h / 0.8);
   color: white;
+}
+
+/* RobinHQ Dark Theme Utility Classes */
+.bg-grid-subtle {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(217, 52, 43, 0.3);
+}
+
+.glass-panel {
+  background: rgba(21, 27, 43, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bento-grid-item {
+  background: linear-gradient(180deg, rgba(21, 27, 43, 0.8) 0%, rgba(15, 19, 32, 1) 100%);
+}
+
+.whatsapp-bg {
+  background-color: #0b141a;
+  background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBbGRxHcNzYpEE0Cf0jItFh_E6YBzvgYjv1LCVqguuCWFv5fjy_McE0jbwekG3K1mUIbLqa7ZL6Niho136ahnYRm94FHSCmo_QcMCOywPYgXPtMqaCYal2AiMnuFhJ5yHeYJ6IHbWCq35DRI6XoSW8Lq2LjZjSkh8BrfpIAezmTH_eG7KHW-zCSt0dyiiFlX6vxfu7mRcF2kTlL_cile4Kpl5rTphHYAH2DJ_QspeqLwQw4TrcirVvAHoNQ_z8tZvPRE0oD6fK5PVg);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px -5px var(--color-accent-glow);
+}
+
+.shadow-card-glow {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.05),
+              0 4px 6px -1px rgba(0, 0, 0, 0.3),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-glow-red {
+  box-shadow: 0 0 60px -15px rgba(217, 52, 43, 0.5);
+}
+
+/* Hide details marker */
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Hide scrollbar for horizontal scroll sections */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar for dark theme */
+.dark-theme ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
 }
